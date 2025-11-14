@@ -27,14 +27,15 @@ public class Equipment {
     private EquipmentStatus status;
     private LocalDate purchaseDate;
     private double purchasePrice;
-    private String facilityId; // Current facility where the equipment is located
-    private String currentUserId; // If rented, ID of the user who has it
+    private Facility facility; // Current facility where the equipment is located
+    private User currentUser; // If rented, ID of the user who has it
     
     /**
      * Checks if the equipment is available for rent
      * @return true if available
      */
     public boolean isAvailable() {
+        Object currentUserId = null;
         return status == EquipmentStatus.AVAILABLE && currentUserId == null;
     }
     

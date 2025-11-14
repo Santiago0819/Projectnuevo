@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Notification {
+public class  Notification {
     public enum NotificationType {
         RESERVATION_CONFIRMATION,
         PAYMENT_RECEIVED,
@@ -24,7 +24,7 @@ public class Notification {
     private String userId;  // Recipient
     private String title;
     private String message;
-    private NotificationType type;
+    private Notification type;
     private LocalDateTime sentAt;
     private boolean isRead;
     
@@ -43,7 +43,7 @@ public class Notification {
                 .userId(userId)
                 .title("Reservation Confirmed")
                 .message(String.format("Your reservation #%s has been confirmed.", reservationId))
-                .type(NotificationType.RESERVATION_CONFIRMATION)
+                .type(Notification.RESERVATION_CONFIRMATION)
                 .sentAt(LocalDateTime.now())
                 .isRead(false)
                 .build();

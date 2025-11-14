@@ -28,7 +28,7 @@ public class Payment {
     private LocalDateTime paymentDate;
     private PaymentMethod paymentMethod;
     private PaymentStatus status;
-    private String transactionId; // External payment gateway transaction ID
+    private transaction Id; // External payment gateway transaction ID
     private String notes;
     
     /**

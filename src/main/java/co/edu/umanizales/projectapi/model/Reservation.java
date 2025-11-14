@@ -20,7 +20,7 @@ public class Reservation {
 
     private String id;
     private String memberId;
-    private String facilityId;
+    private Facility facilityId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private ReservationStatus status;

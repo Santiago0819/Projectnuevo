@@ -20,7 +20,7 @@ public class ServiceReservation {
     private String id;
     private String memberId;
     private String serviceId;
-    private String employeeId; // The staff member providing the service
+    private Employee Id; // The staff member providing the service
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private ServiceStatus status;
@@ -31,7 +31,7 @@ public class ServiceReservation {
      * Checks if this service reservation overlaps with another
      */
     public boolean overlapsWith(ServiceReservation other) {
-        if (!this.employeeId.equals(other.employeeId)) {
+        if (!other.Id. equals (this.Id)) {
             return false;
         }
         return !this.endTime.isBefore(other.startTime) && 
