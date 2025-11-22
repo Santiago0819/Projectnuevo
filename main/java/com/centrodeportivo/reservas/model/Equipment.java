@@ -1,0 +1,12 @@
+package com.centrodeportivo.reservas.model;
+
+import com.centrodeportivo.reservas.repository.CsvEntity;
+import lombok.Data;
+
+@Data
+public class Equipment implements CsvEntity {
+
+    private Long id;
+    private String nombre;
+    private boolean disponible;
+}
